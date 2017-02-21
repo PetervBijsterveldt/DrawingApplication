@@ -21,16 +21,16 @@ public class Image extends DrawingItem {
 
     @Override
     public Point getAnchor() {
-        return null;
+        return anchor;
     }
 
     @Override
     public double getWidth() {
-        return 0;
+        return width;
     }
 
     @Override
     public double getHeight() {
-        return 0;
+        return height;
     }
 }

@@ -1,17 +1,22 @@
 package drawing.domain;
 
-public abstract class DrawingItem {
+public abstract class DrawingItem implements Comparable<DrawingItem> {
 
-    private Color color;
-    private Point anchor;
-    private double width;
-    private double height;
+    protected Color color;
+    protected Point anchor;
+    protected double width;
+    protected double height;
+    protected double distFromOrigin;
+
+    public DrawingItem() {
+    }
 
     public DrawingItem(Color color, Point anchor, double width, double height) {
         this.color = color;
         this.anchor = anchor;
         this.width = width;
         this.height = height;
+        distFromOrigin = calculateDistance(anchor);
     }
 
     public Color getColor() {
@@ -22,8 +27,11 @@ public abstract class DrawingItem {
         this.color = color;
     }
 
+    //Redundant overriding!
     public abstract Point getAnchor();
+
     public abstract double getWidth();
+
     public abstract double getHeight();
 
     public void setAnchor(Point anchor) {
@@ -36,5 +44,18 @@ public abstract class DrawingItem {
 
     public void setHeight(double height) {
         this.height = height;
+    }
+
+    @Override
+    public int compareTo(DrawingItem other) {
+        if (distFromOrigin == other.distFromOrigin) return 0;
+
+        return (distFromOrigin < other.distFromOrigin) ? -1 : 1;
+    }
+
+    public double calculateDistance(Point b) {
+        double x = b.getX();
+        double y = b.getY();
+        return Math.sqrt((x * x) + (y * y));
     }
 }
