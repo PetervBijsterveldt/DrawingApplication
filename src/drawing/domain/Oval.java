@@ -31,4 +31,9 @@ public class Oval extends DrawingItem {
     public void setWeight(double weight) {
         this.weight = weight;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Anchor:(%s,%s),Color:%s,Width:%s,Height:%s,Weight:%s", anchor.getX(), anchor.getY(), color.name(), width, height, weight);
+    }
 }

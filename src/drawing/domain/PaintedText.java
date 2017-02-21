@@ -41,4 +41,9 @@ public class PaintedText extends DrawingItem{
     public double getHeight() {
         return height;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Anchor:(%s,%s),Color:%s,Width:%s,Height%s,Font:%s", anchor.getX(), anchor.getY(), color.name(), width, height, fontName);
+    }
 }

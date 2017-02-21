@@ -69,4 +69,9 @@ public class Polygon extends DrawingItem {
 
         return new Rectangle2D.Double(minX, minY, width, height);
     }
+
+    @Override
+    public String toString() {
+        return String.format("Anchor:(%s,%s),Color:%s,Width:%s,Height:%s,Weight:%s", anchor.getX(), anchor.getY(), color.name(), width, height, weight);
+    }
 }

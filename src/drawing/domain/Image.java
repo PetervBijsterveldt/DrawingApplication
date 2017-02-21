@@ -33,4 +33,9 @@ public class Image extends DrawingItem {
     public double getHeight() {
         return height;
     }
+
+    @Override
+    public String toString() {
+        return String.format("Anchor:(%s,%s),FileName:%s,Width:%s,Height:%s", anchor.getX(), anchor.getY(), file.getPath(), width, height);
+    }
 }

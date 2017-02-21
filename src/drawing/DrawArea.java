@@ -13,7 +13,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 
 
-class DrawArea extends JPanel{
+class DrawArea extends JPanel {
 
     private Drawing picture;
 
@@ -25,9 +25,9 @@ class DrawArea extends JPanel{
         this.picture = drawing;
     }
 
-    public DrawArea(Drawing picture)  {
+    public DrawArea(Drawing picture) {
         this.picture = picture;
-     }
+    }
 
     @Override
     protected void paintComponent(Graphics graphics) {
@@ -52,7 +52,6 @@ class DrawArea extends JPanel{
     }
 
     private void drawPolygon(Graphics2D g, Polygon polygon) {
-
         Point[] vertices = polygon.getVertices();
         int[] xPoints = new int[vertices.length];
         int[] yPoints = new int[vertices.length];
@@ -71,7 +70,6 @@ class DrawArea extends JPanel{
     }
 
     private void drawImage(Graphics2D g, Image image) {
-
         BufferedImage bufferedImage = null;
 
         try {
@@ -90,7 +88,13 @@ class DrawArea extends JPanel{
 
     private void drawPaintedText(Graphics2D g, PaintedText text) {
 
-
+        String content = text.getContent();
+        drawing.domain.Color color = text.getColor();
+        int x = (int) text.getAnchor().getX();
+        int y = (int) text.getAnchor().getY();
+        g.setFont(new Font(text.getFontName(), Font.PLAIN, (int) text.getWidth()));
+        g.setColor(getColor(color));
+        g.drawString(text.getContent(), x, y);
     }
 
     private Color getColor(drawing.domain.Color itemColor) {
@@ -130,5 +134,15 @@ class DrawArea extends JPanel{
                 drawPaintedText(g, (PaintedText) item);
                 break;
         }
+    }
+
+    public void addItem(DrawingItem item) {
+        picture.items.add(item);
+        repaint();
+    }
+
+    public void removeItem(DrawingItem item) {
+        picture.items.remove(item);
+        repaint();
     }
 }

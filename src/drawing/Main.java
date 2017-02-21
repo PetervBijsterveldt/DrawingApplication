@@ -1,6 +1,8 @@
 package drawing;
 
-import drawing.domain.Drawing;
+import drawing.domain.*;
+import drawing.domain.Color;
+import drawing.domain.Point;
 
 import javax.swing.*;
 import java.awt.*;
@@ -13,6 +15,8 @@ public class Main extends JFrame {
     private List<Drawing> drawings;
 
     public static void main(String[] args) {
+        PaintedText text = new PaintedText(Color.BLUE, new Point(50,137), 200,200, "Text", "Arial");
+        System.out.println(text);
         new Main();
     }
 
@@ -26,10 +30,5 @@ public class Main extends JFrame {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setContentPane(panel);
         setVisible(true);
-    }
-
-    private void setDrawing(Drawing drawing) {
-        drawings.add(drawing);
-        panel.setDrawing(drawing);
     }
 }
