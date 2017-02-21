@@ -1,16 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="2d9feaf7-d0ba-49d0-998d-e80b8dd20b82" name="Default" comment="Moved packages, implemented bounding box calculations and distance comparison">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/drawing/DrawArea.java" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/drawing/domain/DrawArea.java" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/drawing/domain/Main.java" afterPath="$PROJECT_DIR$/src/drawing/Main.java" />
+    <list default="true" id="2d9feaf7-d0ba-49d0-998d-e80b8dd20b82" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/drawing/domain/DrawingItem.java" afterPath="$PROJECT_DIR$/src/drawing/domain/DrawingItem.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/drawing/domain/Image.java" afterPath="$PROJECT_DIR$/src/drawing/domain/Image.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/drawing/domain/Oval.java" afterPath="$PROJECT_DIR$/src/drawing/domain/Oval.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/drawing/domain/PaintedText.java" afterPath="$PROJECT_DIR$/src/drawing/domain/PaintedText.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/drawing/domain/Polygon.java" afterPath="$PROJECT_DIR$/src/drawing/domain/Polygon.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -763,7 +755,7 @@
       <option name="presentableId" value="Default" />
       <updated>1487530626402</updated>
       <workItem from="1487530628738" duration="4569000" />
-      <workItem from="1487618909869" duration="7337000" />
+      <workItem from="1487618909869" duration="7347000" />
     </task>
     <task id="LOCAL-00001" summary="Entry point and canvas class">
       <created>1487531268193</created>
@@ -779,11 +771,18 @@
       <option name="project" value="LOCAL" />
       <updated>1487533265263</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Moved packages, implemented bounding box calculations and distance comparison">
+      <created>1487638278043</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1487638278043</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="11906000" />
+    <option name="totallyTimeSpent" value="11916000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
