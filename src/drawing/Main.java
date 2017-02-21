@@ -10,7 +10,6 @@ import java.util.List;
 public class Main extends JFrame {
 
     private DrawArea panel;
-    private JButton button;
     private List<Drawing> drawings;
 
     public static void main(String[] args) {

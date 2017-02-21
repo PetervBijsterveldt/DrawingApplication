@@ -19,6 +19,13 @@ public abstract class DrawingItem implements Comparable<DrawingItem> {
         distFromOrigin = calculateDistance(anchor);
     }
 
+    public DrawingItem(Point anchor, double width, double height) {
+        this.anchor = anchor;
+        this.width = width;
+        this.height = height;
+        distFromOrigin = calculateDistance(anchor);
+    }
+
     public Color getColor() {
         return color;
     }

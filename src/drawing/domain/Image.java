@@ -6,8 +6,8 @@ public class Image extends DrawingItem {
 
     private File file;
 
-    public Image(Color color, Point anchor, double width, double height, File file) {
-        super(color, anchor, width, height);
+    public Image(Point anchor, double width, double height, File file) {
+        super(anchor, width, height);
         this.file = file;
     }
 
