@@ -53,7 +53,7 @@ public abstract class DrawingItem implements Comparable<DrawingItem> {
         return (distFromOrigin < other.distFromOrigin) ? -1 : 1;
     }
 
-    public double calculateDistance(Point b) {
+    protected double calculateDistance(Point b) {
         double x = b.getX();
         double y = b.getY();
         return Math.sqrt((x * x) + (y * y));

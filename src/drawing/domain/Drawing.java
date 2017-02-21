@@ -18,7 +18,6 @@ public class Drawing {
         this.items = new ArrayList<>();
     }
 
-
     public String getName() {
         return name;
     }
